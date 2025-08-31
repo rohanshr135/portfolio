@@ -11,9 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Tailwind Portfolio Page",
+  title: "Rohan Portfolio",
   description:
-    "Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.",
+    "Welcome to Rohan Sharma's portfolio - a passionate Mechanical Engineering student at IIT Guwahati with expertise in software development and innovation.",
 };
 
 export default function RootLayout({

@@ -7,8 +7,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
-  UserCircleIcon,
   CommandLineIcon,
   XMarkIcon,
   Bars3Icon,
@@ -16,17 +14,9 @@ import {
 
 const NAV_MENU = [
   {
-    name: "Page",
-    icon: RectangleStackIcon,
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
     name: "CV/Resume",
     icon: CommandLineIcon,
-    href: "https://drive.google.com/file/d/1JmRynPI40AlhsoAOjiGZn5Eu9b_ZodRN/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1bAU-hGeLOWDZnEl1K0x9C3H9egB6jxyV/view?usp=drive_link",
   },
 ];
 
@@ -97,8 +87,8 @@ export function Navbar() {
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name, icon: Icon }) => (
-              <NavItem key={name}>
+            {NAV_MENU.map(({ name, icon: Icon, href }) => (
+              <NavItem key={name} href={href}>
                 <Icon className="h-5 w-5" />
                 {name}
               </NavItem>
