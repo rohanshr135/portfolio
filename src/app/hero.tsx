@@ -27,13 +27,14 @@ function Hero() {
             </div>
           </div>
         </div>
-        <Image
-          width={1024}
-          height={1024}
-          alt="team work"
-          src={`${getImagePrefix()}image/avatar1.jpg`}
-          className="h-[36rem] w-full rounded-xl object-cover"
-        />
+        <div className="relative h-full w-full">
+          <Image
+            fill
+            alt="team work"
+            src={`${getImagePrefix()}image/_MG_4176.jpg`}
+            className="h-full w-full rounded-xl object-contain"
+          />
+        </div>
       </div>
     </header>
   );
