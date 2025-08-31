@@ -28,7 +28,7 @@ export default function Login() {
         password,
       });
 
-      if (result.error) {
+      if (result?.error) {
         setError("Invalid credentials");
       } else {
         router.push("/");
