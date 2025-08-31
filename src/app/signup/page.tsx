@@ -19,7 +19,7 @@ export default function Signup() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!name || !email || !password) {
@@ -41,8 +41,9 @@ export default function Signup() {
       });
 
       if (res.ok) {
-        const form = e.target;
-        form.reset();
+        setName("");
+        setEmail("");
+        setPassword("");
         router.push("/login");
       } else {
         const { message } = await res.json();
