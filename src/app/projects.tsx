@@ -15,19 +15,19 @@ const PROJECTS = [
     img: `${getImagePrefix()}image/blog2.svg`,
     title: "Company Grow",
     desc: "Developed a workforce platform for training, smart project allocation, and performance rewards using MERN stack and REST APIs.",
-    link: "https://github.com/rohanshr135/Company-Grow",
+    link: "https://github.com/rohanshr135/Company_Grow",
   },
   {
     img: `${getImagePrefix()}image/blog3.svg`,
     title: "E-Commerce Store",
     desc: "Created a full-featured e-commerce platform for product browsing, inventory, and secure payments using JavaScript, HTML, and CSS.",
-    link: "https://github.com/rohanshr135/E-Commerce-Store",
+    link: "https://github.com/rohanshr135/Product_store",
   },
   {
     img: `${getImagePrefix()}image/blog4.svg`,
     title: "Movie Recommender System",
     desc: "Built a personalized recommender system using collaborative and content-based filtering with Python and Jupyter Notebook.",
-    link: "https://github.com/rohanshr135/Movie-Recommender-System",
+    link: "https://github.com/rohanshr135/Recommender-system",
   },
 ];
 

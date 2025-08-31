@@ -13,8 +13,6 @@ import {
   XMarkIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
-import { useSession, signOut } from "next-auth/react";
-import Link from "next/link";
 
 const NAV_MENU = [
   {
@@ -26,9 +24,9 @@ const NAV_MENU = [
     icon: UserCircleIcon,
   },
   {
-    name: "Docs",
+    name: "CV/Resume",
     icon: CommandLineIcon,
-    href: "#",
+    href: "https://drive.google.com/file/d/1JmRynPI40AlhsoAOjiGZn5Eu9b_ZodRN/view?usp=sharing",
   },
 ];
 
@@ -55,7 +53,6 @@ function NavItem({ children, href }: NavItemProps) {
 }
 
 export function Navbar() {
-  const { data: session } = useSession();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen((cur) => !cur);
@@ -82,25 +79,7 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          {session ? (
-            <>
-              <Typography variant="small" color="blue-gray" className="mr-4">
-                Welcome, {session.user?.name}
-              </Typography>
-              <Button variant="text" onClick={() => signOut()}>
-                Sign Out
-              </Button>
-            </>
-          ) : (
-            <>
-              <Link href="/login">
-                <Button variant="text">Sign In</Button>
-              </Link>
-              <Link href="/signup">
-                <Button color="gray">Sign Up</Button>
-              </Link>
-            </>
-          )}
+          {/* Navigation items only */}
         </div>
         <IconButton
           variant="text"
@@ -126,20 +105,7 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            {session ? (
-              <Button variant="text" onClick={() => signOut()}>
-                Sign Out
-              </Button>
-            ) : (
-              <>
-                <Link href="/login">
-                  <Button variant="text">Sign In</Button>
-                </Link>
-                <Link href="/signup">
-                  <Button color="gray">Sign Up</Button>
-                </Link>
-              </>
-            )}
+            {/* Mobile navigation items only */}
           </div>
         </div>
       </Collapse>

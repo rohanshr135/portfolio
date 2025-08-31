@@ -41,12 +41,6 @@ export function ContactForm() {
                 Fill up the form and I will get back to you within 24
                 hours.
               </Typography>
-              <div className="flex gap-5">
-                <PhoneIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  +91-9813731481
-                </Typography>
-              </div>
               <div className="flex my-2 gap-5">
                 <EnvelopeIcon className="h-6 w-6 text-white" />
                 <Typography variant="h6" color="white" className="mb-2">
