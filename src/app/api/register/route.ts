@@ -3,7 +3,7 @@ import User from "@/models/User";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
-export async function POST(req) {
+export async function POST(req: Request) {
   try {
     const { name, email, password } = await req.json();
     const hashedPassword = await bcrypt.hash(password, 10);
